@@ -5,11 +5,11 @@ import '../models/find_cep_model.dart';
 
 final Dio _dio = Dio(BaseOptions(baseUrl: 'https://viacep.com.br/ws/'));
 
-abstract class FindcepRemoteDatasourceImpl {
+abstract class FindcepRemoteDatasource {
   Future<FindCepModel> fetchCep(String cep);
 }
 
-class FindcepRemoteDatasource implements FindcepRemoteDatasourceImpl {
+class FindcepRemoteDatasourceImpl implements FindcepRemoteDatasource {
   @override
   Future<FindCepModel> fetchCep(String cep) async {
     try {

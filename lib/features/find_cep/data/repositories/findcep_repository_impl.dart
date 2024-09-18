@@ -4,12 +4,12 @@ import 'package:via_cep_cubit/features/find_cep/domain/entities/find_cep_entity.
 import '../../../../core/failures/failures.dart';
 import '../datasources/findcep_remote_datasource.dart';
 
-import '../../domain/repositories/findcep_repository_impl.dart';
+import '../../domain/repositories/findcep_repository.dart';
 
-class FindcepRepository implements FindcepRepositoryImpl {
+class FindcepRepositoryImpl implements FindcepRepository {
   final FindcepRemoteDatasource remoteDatasource;
 
-  FindcepRepository(this.remoteDatasource);
+  FindcepRepositoryImpl(this.remoteDatasource);
 
   @override
   Future<Either<Failures, FindCepEntity>> fetchCep(String cep) async {

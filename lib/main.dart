@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:via_cep_cubit/features/find_cep/presentation/pages/cep_search_page.dart';
+import 'features/find_cep/presentation/pages/cep_search_page.dart';
 import 'di.dart' as di;
 
 void main() async {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const CepSearchPage(),
+      home: CepSearchPage(),
     );
   }
 }
